@@ -2,60 +2,72 @@
 <html lang="zh-TW">
 <head>
     <meta charset="UTF-8">
-    <title>致義美高董事長謝卡</title>
+    <title>RWC 2026 義美贊助感謝函</title>
     <style>
         body {
             margin: 0;
-            padding: 0;
-            background-color: #1a1a1a;
+            padding: 40px 0;
+            background-color: #2c0a0a;
             display: flex;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
-            /* 強制全篇使用楷體 */
-            font-family: "標楷體", "DFKai-SB", "BiauKai", serif;
         }
 
+        /* 謝卡主體 */
         .card {
-            /* 根據您的背景圖比例設定 */
-            width: 900px;
-            height: 450px;
-            background-image: url('bg.jpg'); /* 若您要內嵌，請將此處換成 Base64 */
+            width: 1000px; /* 根據原圖比例調整寬度 */
+            height: 500px;
+            background-image: url('bg.jpg'); /* 請確保圖檔名為 bg.jpg */
             background-size: cover;
             background-position: center;
             position: relative;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+            border: 2px solid #d4af37; /* 金色外框線 */
+            box-shadow: 0 15px 50px rgba(0,0,0,0.6);
+            font-family: "標楷體", "DFKai-SB", "BiauKai", serif;
+            color: #ffffff;
             overflow: hidden;
         }
 
-        /* 內容區塊：避開左側地標，放在右側 */
-        .content-box {
+        /* 上下方的會議名稱標記 */
+        .event-header, .event-footer {
+            width: 100%;
+            text-align: center;
+            font-size: 14px; /* 設定與內文一致或略小以求精緻 */
+            color: rgba(212, 175, 55, 0.8); /* 半透明金色 */
+            letter-spacing: 2px;
             position: absolute;
-            top: 40px;
-            right: 40px;
-            bottom: 40px;
-            width: 55%;
-            padding: 30px;
-            background-color: rgba(0, 0, 0, 0.45); /* 極輕微遮罩，增加閱讀清晰度 */
-            color: #ffffff;
-            box-sizing: border-box;
+            left: 0;
+            padding: 10px 0;
+        }
+        .event-header { top: 0; }
+        .event-footer { bottom: 0; }
+
+        /* 文字內容區塊 */
+        .content-container {
+            position: absolute;
+            top: 55px;
+            right: 50px;
+            width: 580px; /* 避開左側 101 地標 */
+            height: 380px;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
         }
 
-        /* 設定所有文字大小一致 */
-        .uniform-text {
-            font-size: 16px; /* 您可以微調這個數值，例如 18px */
-            line-height: 1.8;
+        /* 統一字體大小 */
+        .text-body {
+            font-size: 18px; /* 設定所有字體大小一致 */
+            line-height: 1.7;
             text-align: justify;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.8); /* 增加文字可讀性 */
         }
 
         .paragraph {
-            margin-bottom: 12px;
+            margin-bottom: 15px;
         }
 
-        .footer {
+        .footer-sign {
             text-align: right;
             margin-top: 10px;
         }
@@ -64,10 +76,12 @@
 <body>
 
 <div class="card">
-    <div class="content-box uniform-text">
+    <div class="event-header">The Real World Crypto Symposium (RWC 2026) in Taiwan, Taipei</div>
+
+    <div class="content-container text-body">
         <div>
             <div class="paragraph">高董事長您好：</div>
-
+            
             <div class="paragraph">
                 在此必須向您致上誠摯的感謝。這次 Real World Crypto 2026 會議期間，義美慷慨提供的無乳糖牛奶 (給乳糖不耐症)、辣醬給口味重的會眾，以及義美有名的凍乾點心都非常受到與會者歡迎。
             </div>
@@ -89,11 +103,13 @@
             </div>
         </div>
 
-        <div class="footer">
+        <div class="footer-sign">
             祝 平安喜樂<br>
             柏因 敬上
         </div>
     </div>
+
+    <div class="event-footer">The Real World Crypto Symposium (RWC 2026) in Taiwan, Taipei</div>
 </div>
 
 </body>
