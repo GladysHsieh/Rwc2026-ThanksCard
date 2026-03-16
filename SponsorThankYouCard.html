@@ -16,17 +16,19 @@
         }
 
         /* 謝卡主體 */
-        .card {
-            width: 700px;
-            padding: 600px;            
-            background-image: url('images/bg.png'); 
-            background-size: auto;
+        .card {/* --- 重要：請將下方的寬高修改為您 bg.png 的實際尺寸 --- */
+            width: 800px;  /* 舉例：若圖寬 800px */
+            height: 600px; /* 舉例：若圖高 600px */
+            
+            background-image: url('bg.png');
+            background-size: auto; /* 保留原始尺寸 */
+            background-repeat: no-repeat;
             background-position: center;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
-            border-radius: 8px;
-            position: relative;
-            color: #333;
-            line-height: 1.8;
+            
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.2);
         }
 
         /* 覆蓋一層半透明白色，確保文字清晰度 */
