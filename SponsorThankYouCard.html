@@ -6,8 +6,8 @@
     <style>
         body {
             margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
+            padding: 50px 0;
+            background-color: #f0f2f5; /* 網頁背景色 */
             font-family: "Microsoft JhengHei", "微軟正黑體", sans-serif;
             display: flex;
             justify-content: center;
@@ -15,8 +15,8 @@
             min-height: 100vh;
         }
 
-        /* 謝卡主體 */
-        .card {/* --- 重要：請將下方的寬高修改為您 bg.png 的實際尺寸 --- */
+        .card {
+            /* --- 重要：請將下方的寬高修改為您 bg.png 的實際尺寸 --- */
             width: 800px;  /* 舉例：若圖寬 800px */
             height: 600px; /* 舉例：若圖高 600px */
             
@@ -31,35 +31,33 @@
             box-shadow: 0 15px 35px rgba(0,0,0,0.2);
         }
 
-        /* 覆蓋一層半透明白色，確保文字清晰度 */
-        .overlay {
-            background-color: rgba(255, 255, 255, 0.85);
-            padding: 40px;
+        .content-box {
+            /* 讓文字區域適應圖片內部的空間，您可以調整 width 百分比 */
+            width: 80%;
+            max-height: 85%;
+            overflow-y: auto; /* 若文字太多會出現捲軸，不破壞背景 */
+            background-color: rgba(255, 255, 255, 0.88);
+            padding: 35px;
             border-radius: 5px;
-            border: 1px solid rgba(0,0,0,0.05);
+            line-height: 1.7;
+            color: #333;
         }
 
-        h2 {
-            color: #d32f2f; /* 義美紅調性 */
-            margin-top: 0;
-            border-bottom: 2px solid #d32f2f;
-            padding-bottom: 10px;
-            font-size: 1.4em;
+        .header-title {
+            color: #d32f2f;
+            font-size: 1.3em;
+            font-weight: bold;
+            margin-bottom: 20px;
         }
 
         p {
-            margin-bottom: 1.5em;
+            margin-bottom: 15px;
             text-align: justify;
-            font-size: 1.1em;
-        }
-
-        .highlight {
-            font-weight: bold;
-            color: #2c3e50;
+            font-size: 1.05em;
         }
 
         .footer {
-            margin-top: 40px;
+            margin-top: 30px;
             text-align: right;
         }
 
@@ -67,27 +65,15 @@
             font-size: 1.2em;
             font-weight: bold;
         }
-
-        /* RWC 2026 標記 */
-        .event-tag {
-            font-size: 0.8em;
-            color: #666;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            margin-bottom: 20px;
-            display: block;
-        }
     </style>
 </head>
 <body>
 
 <div class="card">
-    <div class="overlay">
-        <span class="event-tag">Real World Crypto 2026 · Sponsor Appreciation</span>
-        
-        <h2>高董事長您好：</h2>
+    <div class="content-box">
+        <div class="header-title">高董事長您好：</div>
 
-        <p>在此必須向您致上誠摯的感謝。這次 <span class="highlight">Real World Crypto 2026</span> 會議期間，義美慷慨提供的無乳糖牛奶（給乳糖不耐症）、辣醬給口味重的會眾，以及義美有名的凍乾點心都非常受到與會者歡迎。</p>
+        <p>在此必須向您致上誠摯的感謝。這次 <strong>Real World Crypto 2026</strong> 會議期間，義美慷慨提供的無乳糖牛奶（給乳糖不耐症）、辣醬給口味重的會眾，以及義美有名的凍乾點心都非常受到與會者歡迎。</p>
 
         <p>尤其是草莓巧克力口味的凍乾，每次在 coffee break 一端出來，大家很快就搶拿光了，通常休息時間還沒一半就已經被取用一空。許多來自國外的學者也對義美的產品印象深刻，覺得非常好吃，也覺得很有台灣特色。</p>
 
@@ -98,9 +84,8 @@
         <p>再次感謝董事長的支持與心意，也祝福義美生意興隆、萬事順心。</p>
 
         <div class="footer">
-            <p>祝<br>平安喜樂</p>
-            <p class="signature">柏因 敬上</p>
-            <p style="font-size: 0.9em; color: #7f8c8d;">2026年3月</p>
+            祝 平安喜樂<br><br>
+            <span class="signature">柏因 敬上</span>
         </div>
     </div>
 </div>
