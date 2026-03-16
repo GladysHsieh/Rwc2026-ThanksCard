@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>致義美高董事長感謝函</title>
+    <title>RWC 2026 致謝函 (A6 尺寸)</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;800&family=Noto+Sans+TC:wght@400;600&display=swap" rel="stylesheet">
     <style>
         body {
@@ -13,138 +13,243 @@
             font-family: 'Noto Sans TC', sans-serif;
             display: flex;
             justify-content: center;
-            align-items: center;
-            min-height: 80vh;
+            align-items: center; 
+            min-height: 100vh;
         }
 
+        /* --- 設定為嚴格的 A6 橫式大小 (148mm x 105mm) --- */
         .container {
-            width: 85%;
-            max-width: 1000px;
+            width: 148mm;
+            height: 105mm;
             background-color: white;
-            box-shadow: 0 0 25px rgba(0,0,0,0.6);
+            box-shadow: 0 0 15px rgba(0,0,0,0.5);
             display: flex;
             flex-direction: column;
-            margin: 15px auto;
+            margin: 0 auto;
+            overflow: hidden; /* 防止內容撐破 A6 邊界 */
+            box-sizing: border-box;
         }
 
-        /* --- 1. Header --- */
+        /* --- 1. Header (Logo 等比例大幅縮小) --- */
         .header {
             background-color: white;
-            padding: 15px 35px;
+            padding: 5px 15px;
             display: flex;
             justify-content: center;
             align-items: center;
             flex-wrap: wrap;
-            gap: 15px;
+            gap: 6px;
             border-bottom: 1px solid #eee;
         }
         
         .header img {
-            height: 50px;
+            height: 16px; /* 原本 50px */
             width: auto;
             object-fit: contain;
         }
-        .header img.long { height: 40px; }
+        .header img.long { height: 12px; }
 
         /* --- 2. Main Content --- */
         .main-content {
-            flex: 1;
+            flex: 1; 
             position: relative;
+            /* 👇 使用您修正後的正確 path 圖片 👇 */
             background-image: url('image/bg.png'); 
-            background-size: cover;
+            background-size: cover; /* 背景圖會自動適應 A6 大小 */
             background-position: center center;
             background-repeat: no-repeat;
-            padding: 50px 45px 45px 45px;
+            padding: 8px 15px 12px 15px;
             color: white;
             background-color: #222;
             display: flex;
             flex-direction: column;
-            align-items: center;
         }
 
         .title-area {
             text-align: center;
-            margin-bottom: 40px;
+            margin-bottom: 6px;
         }
 
         h1 {
-            font-family: 'Noto Sans TC', sans-serif;
-            font-size: 32px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 13px; /* 原本 30px */
             font-weight: 600;
             color: #FFD700;
-            margin: 0 0 10px 0;
-            text-shadow: 2px 2px 5px rgba(0,0,0,0.9);
-            letter-spacing: 2px;
+            margin: 0 0 4px 0;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.9);
+            line-height: 1.2;
         }
 
         h2 {
-            font-family: 'Noto Sans TC', sans-serif;
-            font-size: 22px;
-            font-weight: 400;
+            font-family: 'Noto Sans TC', 'Montserrat', sans-serif;
+            font-size: 10px; /* 原本 24px */
+            font-weight: 560;
             color: #ffffff;
             margin: 0;
-            text-shadow: 2px 2px 5px rgba(0,0,0,0.9);
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.9);
             display: inline-block;
             border-bottom: 2px solid #FFD700;
-            padding-bottom: 5px;
+            padding-bottom: 2px;
             letter-spacing: 1px;
         }
 
-        /* 感謝函內文區塊 */
-        .thank-you-message {
-            max-width: 800px;
-            width: 100%;
-            font-size: 17px;
-            line-height: 1.8;
-            text-shadow: 1px 1px 3px rgba(0,0,0, 0.9);
-            text-align: justify;
-            margin-bottom: 30px;
-        }
-        
-        .thank-you-message p {
-            margin-bottom: 18px;
-            text-indent: 2em; /* 首行縮排兩個字，符合中文書信習慣 */
+        /* 致詞區塊 */
+        .salutation-area {
+            text-align: center;
+            font-size: 9.5px;
+            font-weight: bold;
+            margin-bottom: 6px;
+            text-shadow: 1px 1px 2px rgba(0,0,0, 0.9);
         }
 
-        .thank-you-message p.no-indent {
-            text-indent: 0; /* 稱呼不縮排 */
-        }
-
-        /* 簽名區塊 */
-        .signature-section {
-            width: 100%;
-            max-width: 800px;
+        /* --- 核心佈局 --- */
+        .content-row {
             display: flex;
-            justify-content: flex-end; /* 讓落款靠右 */
-            margin-top: 10px;
-        }
-        
-        .signature-block {
-            font-size: 17px;
-            color: white;
-            line-height: 1.6;
-            text-align: left;
-            width: 250px;
-            text-shadow: 1px 1px 3px rgba(0,0,0, 0.9);
+            gap: 10px; 
+            align-items: center; 
+            justify-content: center;
+            width: 85%;
+            margin: 0 auto;
+            flex: 1;
         }
 
-        /* 老闆手寫簽名的預留空間 */
-        .signature-space {
-            height: 70px; /* 👈 您可以調整這個數值來控制簽名空間的高度 */
+        /* --- 左側：貴賓欄 (寬度鎖定) --- */
+        .info-col {
+            flex: 1; 
+            max-width: 100px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            background: rgba(255,255,255, 0.1); 
+            backdrop-filter: blur(5px);
+            padding: 6px 8px; 
+            border-radius: 4px;
+            border: 1px solid rgba(255,255,255,0.2);
+            text-align: left;
+            text-shadow: 1px 1px 2px rgba(0,0,0, 0.9);
+        }
+
+        .info-item {
+            margin-bottom: 4px;
+            font-size: 7.5px;
+            border-bottom: 1px dashed rgba(255,255,255,0.3);
+            padding-bottom: 4px;
+        }
+        .info-item:last-child { border-bottom: none; margin-bottom: 1px;}
+        
+        .info-label {
+            color: #FFD700;
+            font-weight: 600;
+            font-family: 'Noto Sans TC', sans-serif;
+            display: block;
+            margin-bottom: 2px;
+            font-size: 7.5px;
+            letter-spacing: 0.5px;
+        }
+        
+        .info-value {
+            font-weight: 600;
+            line-height: 1.3;
+        }
+
+        /* --- 右側：感謝文欄 (寬度鎖定) --- */
+        .message-col {
+            flex: 2.5;
+            max-width: 210px;
+            display: flex;
+        }
+
+        .message-box-container {
+            background: rgba(0,0,0, 0.5);
+            padding: 6px 10px; 
+            border-radius: 8px;
+            display: flex;
+            flex-direction: column;
+            width: 100%; 
+            justify-content: center;
+        }
+
+        .msg-zh {
+            font-size: 8px; /* 配合 A6 縮小字體 */
+            line-height: 1.5;
+            text-shadow: 1px 1px 2px black;
+            text-align: justify;
+            display: flex;
+            flex-direction: column;
+            height: auto;
+        }
+
+        .msg-p { margin-top: 0; margin-bottom: 3px; }
+        
+        /* 簽名檔樣式 (移至 bottom) */
+        .msg-signature {
+            margin-top: 5px; 
+            text-align: right;
+            border-top: 1px solid rgba(255,255,255,0.2);
+            padding-top: 5px;
+            font-size: 7.5px;
+        }
+
+        /* --- 下方：大面積空白簽名處 --- */
+        .signature-area {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 8px;
+            padding: 5px;
+            border: 1px dashed rgba(255,255,255, 0.4);
+            border-radius: 4px;
+            text-align: center;
+            width: 85%;
+            margin: 8px auto 0 auto;
+        }
+        
+        .signature-label {
+            font-size: 7.5px;
+            color: #FFD700;
+            margin-bottom: 3px;
+            font-weight: bold;
+        }
+        
+        /* 👇 這裡是供手寫簽名的大面積空白高度 👇 */
+        .signature-blank {
+            height: 35px; /* 您可以微調這個高度 */
+            width: 100%;
+        }
+        
+        .signature-names {
+            font-size: 7px;
+            color: white;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.9);
+            line-height: 1.3;
+            margin-top: 3px;
         }
 
         /* --- 3. Footer --- */
         .footer {
             background-color: white;
-            padding: 0;
-            min-height: 8px;
-            border-top: 5px solid #800000;
+            border-top: 3px solid #800000;
+            min-height: 8px; 
         }
         
-        /* 列印設定 */
+        /* --- 手寫留白專用框 --- */
+        .fill-blank {
+            display: inline-block;
+            background-color: rgba(255, 255, 255, 0.65); 
+            border-radius: 2px;
+            vertical-align: middle;
+            margin: 0 2px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.8); 
+        }
+
+        /* --- Print 列印強制設定為 A6 --- */
         @media print {
-             @page { size: landscape; margin: 0; }
-             .container { width: 90%; box-shadow: none; margin: 0; }
+             @page { 
+                 size: A6 landscape; 
+                 margin: 0; 
+             }
+             body { background-color: white; }
+             .container { box-shadow: none; margin: 0; width: 148mm; height: 105mm; }
              .main-content { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
         }
     </style>
@@ -154,46 +259,64 @@
     <div class="container">
         
         <div class="header">
-            <img src="image/logo_iacr.png" style="height: 50px;" alt="IACR">
-            <img src="image/logo_as.png" style="height: 50px;" alt="Academia Sinica" class="long">
-            <img src="image/logo_iis.jpg" style="height: 45px;" alt="IIS">
-            <img src="image/logo_citi.jpg" style="height: 45px;" alt="CITI" class="long">
-            <div style="width: 1px; height: 30px; background: #ddd; margin: 0 10px;"></div>
-            <img src="image/logo_ccisa.jpg" style="height: 55px;" alt="CCISA">
-            <img src="image/logo_nstc.png" style="height: 25px;" alt="NSTC" class="long">
-            <img src="image/logo_mice.png" style="height: 32px;" alt="MICE" class="long">
+            <img src="image/logo_iacr.png" alt="IACR">
+            <img src="image/logo_as.png" alt="Academia Sinica" class="long">
+            <img src="image/logo_iis.jpg" alt="IIS">
+            <img src="image/logo_citi.jpg" alt="CITI" class="long">
+            <div style="width: 1px; height: 12px; background: #ccc; margin: 0 2px;"></div>
+            <img src="image/logo_ccisa.jpg" alt="CCISA">
+            <img src="image/logo_nstc.png" alt="NSTC" class="long">
+            <img src="image/logo_mice.png" alt="MICE" class="long">
         </div>
 
         <div class="main-content">
             
             <div class="title-area">
-                <h1>感謝函</h1>
-                <h2>真實世界密碼學國際會議 (RWC 2026)</h2>
+                <h1>RWC 2026 Symposium Thank You Note</h1>
+                <h2>真實世界密碼學國際會議致謝</h2>
             </div>
 
-            <div class="thank-you-message">
-                <p class="no-indent">高董事長您好：</p>
-                <p>在此必須向您致上誠摯的感謝。這次 Real World Crypto 2026 會議期間，義美慷慨提供的無乳糖牛奶 (給乳糖不耐症)、辣醬給口味重的會眾，以及義美有名的凍乾點心都非常受到與會者歡迎。</p>
-                <p>尤其是草莓巧克力口味的凍乾，每次在 coffee break 一端出來，大家很快就搶拿光了，通常休息時間還沒一半就已經被取用一空。許多來自國外的學者也對義美的產品印象深刻，覺得非常好吃，也覺得很有台灣特色。</p>
-                <p>另外也要特別拜謝董事長的大力贊助，對我和鐘楷閔這次辦理會議幫助很大，讓整個活動能夠更順利圓滿地完成，真的極其感激。</p>
-                <p>也想代家父向董事長致謝。他一直對董事長送來的點心非常感心，只是一直不知道該怎麼向您表達謝意。這幾天他手有點不方便，但知道我有機會能寫信給董事長，特別交代我一定要代他向您說聲謝謝。</p>
-                <p>再次感謝董事長的支持與心意，也祝福義美生意興隆、萬事順心。</p>
+            <div class="salutation-area">
+                致謝貴賓 <span class="fill-blank" style="width: 130px; height: 13px;"></span> 鈞啟
             </div>
 
-            <div class="signature-section">
-                <div class="signature-block">
-                    <div>祝</div>
-                    <div>平安喜樂</div>
-                    
-                    <div class="signature-space"></div>
-                    
-                    <div><strong>柏因</strong> 敬上</div>
+            <div class="content-row">
+                
+                <div class="info-col">
+                    <div class="info-item">
+                        <span class="info-label">我們非常感謝您的支持</span>
+                        <span class="info-value">We deeply appreciate your participation.</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">期待未來合作</span>
+                        <span class="info-value">Look forward to future collaboration.</span>
+                    </div>
+                </div>
+
+                <div class="message-col">
+                    <div class="message-box-container">
+                        <div class="msg-zh">
+                            <p class="msg-p">感謝您的大力支持！本次 RWC 2026 會議在您的協助下圓滿順利。</p>
+                            <p class="msg-p">我們非常珍惜您的合作，並期待未來能有更多合作機會。再次致謝！</p>
+                            <p class="msg-p">Thank you for your generous support! RWC 2026 was successful because of your assistance. We deeply value our partnership and look forward to future collaborations. Sincerely.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            
+            <div class="signature-area">
+                <div class="signature-label">簽名處 (Signature Area)</div>
+                <div class="signature-blank"></div> <div class="signature-names">
+                    <strong>楊柏因 Bo-Yin Yang &nbsp;|&nbsp; 鐘楷閔 Kai-Min Chung</strong><br>
+                    <span style="font-size: 6.5px;">大會共同主席 General Co-Chairs</span>
                 </div>
             </div>
 
         </div>
-
+        
         <div class="footer"></div>
+        
     </div>
 
 </body>
