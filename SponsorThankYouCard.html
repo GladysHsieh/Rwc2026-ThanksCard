@@ -2,113 +2,77 @@
 <html lang="zh-TW">
 <head>
     <meta charset="UTF-8">
-    <title>RWC 2026 義美贊助感謝函</title>
+    <title>RWC 2026 義美贊助謝卡 (純淨版)</title>
     <style>
-        /* 1. 基礎設定：全篇楷書 */
-        * {
-            font-family: "標楷體", "DFKai-SB", "BiauKai", serif;
-            box-sizing: border-box;
-        }
-
         body {
             margin: 0;
             padding: 40px 0;
-            background-color: #1a0505; /* 網頁底色 */
+            background-color: #2c0a0a; /* 網頁底色，呼應卡片 */
             display: flex;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
         }
 
-        /* 2. 卡片主體 */
+        /* 謝卡主體 */
         .card {
-            width: 1000px;
-            height: 550px;
-            /* 背景設定：先吃漸層色(備援)，再吃圖檔 */
-            background: linear-gradient(135deg, #4a0404 0%, #200101 100%), url('bg.jpg');
+            /* 加寬邊界：將寬度從 1000px 加寬到 1200px，高度不變 */
+            width: 1200px;
+            height: 500px;
+            
+            /* 背景設定：請確保圖檔名改為 bg.jpg 並放在同一個資料夾 */
+            background-image: url('bg.jpg');
             background-size: cover;
             background-position: center;
             
             position: relative;
-            border: 2px solid #a67c00; /* 金色細邊框 */
-            box-shadow: 0 20px 60px rgba(0,0,0,0.7);
-            color: #ffffff;
-            padding: 60px;
-        }
-
-        /* 3. 上下方標語 (RWC 2026) */
-        .banner {
-            position: absolute;
-            width: 100%;
-            left: 0;
-            text-align: center;
-            font-size: 16px; /* 與內文一致 */
-            color: #d4af37; /* 金色 */
-            letter-spacing: 1px;
-        }
-        .top-banner { top: 20px; }
-        .bottom-banner { bottom: 20px; }
-
-        /* 4. 內文區塊：調整寬度避開左側 101 地標 */
-        .content {
-            margin-left: auto; /* 推到右邊 */
-            width: 58%;        /* 寬度佔比 58% */
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
             
-            /* 所有文字大小統一 */
-            font-size: 18px; 
+            /* 保留並加粗精緻的金邊線條，增加質感 */
+            border: 3px solid #d4af37;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.7);
+            
+            overflow: hidden;
+        }
+
+        /* 保留台北地標剪影在左側 */
+        .landmarks-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            /* 這裡使用一個假的漸層來代表地標的位置與顏色 */
+            background: linear-gradient(135deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.01) 100%);
+        }
+
+        /* 右側留白區域：可在此填寫新內容 */
+        .writing-area {
+            position: absolute;
+            top: 60px; /* 從金色邊框下方開始 */
+            right: 60px; /* 留出加寬後的邊界 */
+            width: 580px; /* 避開左側 101 地標 */
+            height: 380px;
+            padding: 40px;
+            
+            /* 採用楷書作為預設字體 */
+            font-family: "標楷體", "DFKai-SB", "BiauKai", serif;
+            color: #ffffff;
+            font-size: 18px; /* 大小一致 */
             line-height: 1.8;
-        }
-
-        .text-block {
             text-align: justify;
-            white-space: pre-wrap; /* 保留換行 */
-        }
-
-        .salutation {
-            margin-bottom: 20px;
-        }
-
-        .signature-block {
-            text-align: right;
-        }
-
-        /* 讓文字在深色背景更清晰的小技巧 */
-        .text-shadow {
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.9);
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.8); /* 增加文字可讀性 */
+            
+            /* 可依需手動在 div 內填寫感謝內文 */
         }
     </style>
 </head>
 <body>
 
 <div class="card">
-    <div class="banner top-banner">The Real World Crypto Symposium (RWC 2026) in Taiwan, Taipei</div>
+    <div class="landmarks-overlay"></div>
 
-    <div class="content text-shadow">
-        <div>
-            <div class="salutation">高董事長您好：</div>
-            
-            <div class="text-block">在此必須向您致上誠摯的感謝。這次 Real World Crypto 2026 會議期間，義美慷慨提供的無乳糖牛奶 (給乳糖不耐症)、辣醬給口味重的會眾，以及義美有名的凍乾點心都非常受到與會者歡迎。
-
-尤其是草莓巧克力口味的凍乾，每次在 coffee break 一端出來，大家很快就搶拿光了，通常休息時間還沒一半就已經被取用一空。許多來自國外的學者也對義美的產品印象深刻，覺得非常好吃，也覺得很有台灣特色。
-
-另外也要特別拜謝董事長的大力贊助，對我和鐘楷閔這次辦理會議幫助很大，讓整個活動能夠更順利圓滿地完成，真的極其感激。
-
-也想代家父向董事長致謝。他一直對董事長送來的點心非常感心，只是一直不知道該怎麼向您表達謝意。這幾天他手有點不方便，但知道我有機會能寫信給董事長，特別交代我一定要代他向您說聲謝謝。
-
-再次感謝董事長的支持與心意，也祝福義美生意興隆、萬事順心。</div>
+    <div class="writing-area">
         </div>
-
-        <div class="signature-block">
-            祝 平安喜樂<br>
-            柏因 敬上
-        </div>
-    </div>
-
-    <div class="banner bottom-banner">The Real World Crypto Symposium (RWC 2026) in Taiwan, Taipei</div>
 </div>
 
 </body>
