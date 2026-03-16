@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>RWC 2026 義美贊助感謝函</title>
     <style>
-        /* 全域設定：強制標楷體 */
+        /* 全域設定：統一使用標楷體 */
         * {
             font-family: "標楷體", "DFKai-SB", "BiauKai", serif;
             box-sizing: border-box;
@@ -12,8 +12,8 @@
 
         body {
             margin: 0;
-            padding: 0;
-            background-color: #1a0505;
+            padding: 20px;
+            background-color: #1a0505; /* 網頁底色 */
             display: flex;
             justify-content: center;
             align-items: center;
@@ -21,87 +21,88 @@
         }
 
         /* 謝卡主體 */
-.card {
-            width: 1200px;  /* 同步加寬，維持大氣比例 */
-            height: 800px;  /* 您調高的高度 */
+        .card {
+            width: 1200px;
+            height: 750px; /* 稍微調高的高度 */
             background-image: url('BG1.png');
-            background-size: 80%;
-            background-repeat: no-repeat; /* 避免圖片重疊重複 */
+            background-size: cover;
+            background-position: center;
             position: relative;
+            border: 2px solid #a67c00; /* 金色細邊框 */
             box-shadow: 0 30px 60px rgba(0,0,0,0.8);
             display: flex;
-            justify-content: flex-end;
+            justify-content: flex-end; /* 將文字推向右方 */
             align-items: center;
-            padding: 0 80px; /* 邊距稍微加寬 */
+            padding: 60px;
+            overflow: hidden;
         }
+
+        /* Header & Footer 設定 */
+        .event-label {
+            position: absolute;
+            width: 100%;
+            left: 0;
+            text-align: center;
+            font-size: 18px; /* 與內文字體大小一致 */
+            color: rgba(212, 175, 55, 0.85); /* 雅緻的半透明金色 */
+            letter-spacing: 1px;
+        }
+        .header { top: 25px; }
+        .footer { bottom: 25px; }
 
         /* 文字內容區塊 */
         .content-area {
-            width: 50%;     /* 高度變高後，寬度佔比可稍微縮小讓文字更集中 */
-            height: 70%;    /* 縮小百分比，避免文字上下散得太開 */
+            width: 55%; /* 避開左側 101 地標 */
+            height: 80%;
             display: flex;
             flex-direction: column;
-            justify-content: center; /* 改為居中對齊，視覺更穩 */
+            justify-content: center; /* 垂直居中，美感較佳 */
             color: #ffffff;
-            font-size: 24px; /* 字體同步放大，更易閱讀 */
+            font-size: 18px; /* 全篇文字大小統一 */
             line-height: 1.8;
             text-align: justify;
-            text-shadow: 2px 2px 5px rgba(0,0,0,0.9);
+            text-shadow: 2px 2px 4px rgba(0,0,0,1); /* 加強深色背景下的可讀性 */
         }
 
         .paragraph {
-            margin-bottom: 25px; /* 增加段落間距 */
+            margin-bottom: 20px;
+            white-space: pre-wrap; /* 保留換行 */
         }
 
-        /* 署名部分靠右 */
         .signature-group {
             text-align: right;
-            margin-top: 10px;
-        }
-
-        /* 響應式微調：確保在不同螢幕上顯示比例正確 */
-        @media screen and (max-width: 1200px) {
-            .card {
-                transform: scale(0.8);
-            }
+            margin-top: 15px;
         }
     </style>
 </head>
 <body>
 
 <div class="card">
+    <div class="event-label header">The Real World Crypto Symposium (RWC 2026) in Taiwan, Taipei</div>
+
     <div class="content-area">
         <div class="main-text">
             <div class="paragraph">高董事長您好：</div>
 
-            <div class="paragraph">
-                在此必須向您致上誠摯的感謝。<br>
-                這次 Real World Crypto 2026 會議期間，義美慷慨提供的無乳糖牛奶 (給乳糖不耐症)、辣醬給口味重的會眾，以及義美有名的凍乾點心都非常受到與會者歡迎。
-            </div>
+            <div class="paragraph">在此必須向您致上誠摯的感謝。
+這次 Real World Crypto 2026 會議期間，義美慷慨提供的無乳糖牛奶 (給乳糖不耐症)、辣醬給口味重的會眾，以及義美有名的凍乾點心都非常受到與會者歡迎。</div>
 
-            <div class="paragraph">
-                尤其是草莓巧克力口味的凍乾，每次在 coffee break 一端出來，大家很快就搶拿光了，通常休息時間還沒一半就已經被取用一空。許多來自國外的學者也對義美的產品印象深刻，覺得非常好吃，也覺得很有台灣特色。
-            </div>
+            <div class="paragraph">尤其是草莓巧克力口味的凍乾，每次在 coffee break 一端出來，大家很快就搶拿光了，通常休息時間還沒一半就已經被取用一空。許多來自國外的學者也對義美的產品印象深刻，覺得非常好吃，也覺得很有台灣特色。</div>
 
-            <div class="paragraph">
-                另外也要特別拜謝董事長的大力贊助，對我和鐘楷閔這次辦理會議幫助很大，讓整個活動能夠更順利圓滿地完成，真的極其感激。
-            </div>
+            <div class="paragraph">另外也要特別拜謝董事長的大力贊助，對我和鐘楷閔這次辦理會議幫助很大，讓整個活動能夠更順利圓滿地完成，真的極其感激。</div>
 
-            <div class="paragraph">
-                也想代家父向董事長致謝。他一直對董事長送來的點心非常感心，只是一直不知道該怎麼向您表達謝意。這幾天他手有點不方便，但知道我有機會能寫信給董事長，特別交代我一定要代他向您說聲謝謝。
-            </div>
+            <div class="paragraph">也想代家父向董事長致謝。他一直對董事長送來的點心非常感心，只是一直不知道該怎麼向您表達謝意。這幾天他手有點不方便，但知道我有機會能寫信給董事長，特別交代我一定要代他向您說聲謝謝。</div>
 
-            <div class="paragraph">
-                再次感謝董事長的支持與心意，也祝福義美生意興隆、萬事順心。
-            </div>
+            <div class="paragraph">再次感謝董事長的支持與心意，也祝福義美生意興隆、萬事順心。</div>
         </div>
 
         <div class="signature-group">
-            祝<br><br>
-            平安喜樂<br>
+            祝 平安喜樂<br>
             柏因 敬上
         </div>
     </div>
+
+    <div class="event-label footer">The Real World Crypto Symposium (RWC 2026) in Taiwan, Taipei</div>
 </div>
 
 </body>
