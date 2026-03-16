@@ -21,36 +21,36 @@
         }
 
         /* 謝卡主體 */
-        .card {
-            width: 1200px;
-            height: 800px;
-            background-image: url('BG1.png'); /* 請確認您的圖檔名為 bg.jpg */
+.card {
+            width: 1400px;  /* 同步加寬，維持大氣比例 */
+            height: 800px;  /* 您調高的高度 */
+            background-image: url('bg.jpg');
             background-size: cover;
             background-position: center;
             position: relative;
             box-shadow: 0 30px 60px rgba(0,0,0,0.8);
             display: flex;
-            justify-content: flex-end; /* 將內容推向右側 */
+            justify-content: flex-end;
             align-items: center;
-            padding: 0 60px;
+            padding: 0 80px; /* 邊距稍微加寬 */
         }
 
         /* 文字內容區塊 */
         .content-area {
-            width: 55%; /* 避開左側 101 與地標 */
-            height: 80%;
+            width: 50%;     /* 高度變高後，寬度佔比可稍微縮小讓文字更集中 */
+            height: 70%;    /* 縮小百分比，避免文字上下散得太開 */
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
+            justify-content: center; /* 改為居中對齊，視覺更穩 */
             color: #ffffff;
-            font-size: 19px; /* 統一字體大小 */
-            line-height: 1.7;
+            font-size: 24px; /* 字體同步放大，更易閱讀 */
+            line-height: 1.8;
             text-align: justify;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.9);
+            text-shadow: 2px 2px 5px rgba(0,0,0,0.9);
         }
 
         .paragraph {
-            margin-bottom: 12px;
+            margin-bottom: 25px; /* 增加段落間距 */
         }
 
         /* 署名部分靠右 */
