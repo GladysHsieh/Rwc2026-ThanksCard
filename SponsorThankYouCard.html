@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>RWC 2026 義美贊助感謝函</title>
     <style>
+        /* 全域設定：標楷體 */
         * {
             font-family: "標楷體", "DFKai-SB", "BiauKai", serif;
             box-sizing: border-box;
@@ -19,72 +20,70 @@
             min-height: 100vh;
         }
 
-        /* 謝卡主體：設定為 21:15 比例 (1260 x 900) */
+        /* 謝卡主體：21:15 比例 (1260 x 900) */
         .card {
             width: 1260px;
             height: 900px;
-            
-            /* 背景圖縮小設定 */
-            background-image: url('bg2.png'); /* 請確認副檔名為 .jpg 或 .png */
-            background-size: cover; 
-            background-repeat: no-repeat;
-            background-position: left bottom; 
-            background-color: #3b0a0a; 
-            
+            background-image: url('bg2.png'); /* 請確保圖檔名為 bg2.png */
+            background-size: cover;
+            background-position: center;
             position: relative;
-            border: 2px solid #a67c00;
+            border: 2px solid #a67c00; 
             box-shadow: 0 30px 60px rgba(0,0,0,0.8);
             display: flex;
-            justify-content: flex-end;
+            justify-content: flex-end; 
             align-items: center;
-            padding: 80px 80px;
+            padding: 0 80px;
             overflow: hidden;
         }
 
-        /* Header & Footer */
+        /* 僅保留 Header */
         .event-label {
             position: absolute;
             width: 100%;
             left: 0;
+            top: 40px; /* 稍微下移，避開邊框 */
             text-align: center;
-            font-size: 18px;
-            color: rgba(212, 175, 55, 0.85);
-            letter-spacing: 1px;
+            font-size: 19px; 
+            color: rgba(212, 175, 55, 0.9); 
+            letter-spacing: 1.5px;
             z-index: 2;
         }
-        .header { top: 30px; }
-        .footer { bottom: 30px; }
 
         /* 文字內容區塊 */
         .content-area {
             width: 52%; 
-            height: 75%; /* 固定高度比例，確保文字垂直置中且不溢出 */
+            height: 70%; /* 垂直佔比 */
             display: flex;
             flex-direction: column;
-            justify-content: center; /* 21:15 空間充裕，改為居中更美觀 */
+            justify-content: center; 
             color: #ffffff;
-            font-size: 19px; /* 空間變大，稍微提升字級 */
-            line-height: 1.9;
+            font-size: 19px; 
+            line-height: 2.1; /* 稍微增加行高讓版面更開闊 */
             text-align: justify;
             text-shadow: 2px 2px 5px rgba(0,0,0,1);
             z-index: 1;
+            overflow-y: auto;
         }
 
+        /* 隱藏捲軸 */
+        .content-area::-webkit-scrollbar { width: 0; }
+
         .paragraph {
-            margin-bottom: 22px;
+            margin-bottom: 25px;
             white-space: pre-wrap;
         }
 
         .signature-group {
             text-align: right;
-            margin-top: 30px;
+            margin-top: 40px;
         }
     </style>
 </head>
 <body>
 
 <div class="card">
-    <div class="event-label header">The Real World Crypto Symposium (RWC 2026) in Taiwan, Taipei</div>
+    <div class="event-label">The Real World Crypto Symposium (RWC 2026) in Taiwan, Taipei</div>
 
     <div class="content-area">
         <div class="main-text">
@@ -107,8 +106,6 @@
             柏因 敬上
         </div>
     </div>
-
-    <div class="event-label footer"></div>
 </div>
 
 </body>
