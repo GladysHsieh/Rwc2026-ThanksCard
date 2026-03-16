@@ -50,20 +50,20 @@
             z-index: 2;
         }
 
-        /* 文字內容區塊 */
+        /* 文字內容區塊微調版 */
         .content-area {
-            width: 52%; 
-            height: 70%; /* 垂直佔比 */
+            width: 58%;        /* 1. 寬度加寬，讓每行字變多 */
+            max-height: 720px; /* 2. 限制最高高度，不超過背景金色邊框 */
             display: flex;
             flex-direction: column;
-            justify-content: center; 
+            justify-content: flex-start; /* 3. 改為靠上對齊，確保長文從頭開始 */
             color: #ffffff;
-            font-size: 19px; 
-            line-height: 2.1; /* 稍微增加行高讓版面更開闊 */
+            font-size: 18px;   /* 4. 字體微降 1px，這對容納長文非常有幫助 */
+            line-height: 1.8;  /* 5. 行高微降，保持優雅但更緊湊 */
             text-align: justify;
             text-shadow: 2px 2px 5px rgba(0,0,0,1);
             z-index: 1;
-            overflow-y: auto;
+            overflow-y: auto;  /* 6. 若內容真的太長，允許在框內滾動 */
         }
 
         /* 隱藏捲軸 */
