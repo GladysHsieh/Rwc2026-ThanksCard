@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>RWC 2026 義美贊助感謝函</title>
     <style>
+        /* 全域設定：統一使用標楷體 */
         * {
             font-family: "標楷體", "DFKai-SB", "BiauKai", serif;
             box-sizing: border-box;
@@ -12,7 +13,7 @@
         body {
             margin: 0;
             padding: 20px;
-            background-color: #1a0505;
+            background-color: #1a0505; /* 網頁底色 */
             display: flex;
             justify-content: center;
             align-items: center;
@@ -21,70 +22,56 @@
 
         /* 謝卡主體 */
         .card {
-            width: 1600px;
-            height: 1200px; /* 1. 增加高度以容納長文 */
+            width: 1200px;
+            height: 960px; /* 稍微調高的高度 */
             background-image: url('BG1.png');
-            background-size: 85%;
-            background-repeat: no-repeat;
-            background-position:center; 
+            background-size: cover;
+            background-position: center;
             position: relative;
-            border: 2px solid #a67c00;
+            border: 2px solid #a67c00; /* 金色細邊框 */
             box-shadow: 0 30px 60px rgba(0,0,0,0.8);
             display: flex;
-            justify-content: flex-end;
+            justify-content: flex-end; /* 將文字推向右方 */
             align-items: center;
-            padding: 80px 60px; /* 增加上下內距，避免文字碰到 Header/Footer */
+            padding: 60px;
             overflow: hidden;
         }
 
+        /* Header & Footer 設定 */
         .event-label {
             position: absolute;
             width: 100%;
             left: 0;
             text-align: center;
-            font-size: 18px;
-            color: rgba(212, 175, 55, 0.85);
+            font-size: 18px; /* 與內文字體大小一致 */
+            color: rgba(212, 175, 55, 0.85); /* 雅緻的半透明金色 */
             letter-spacing: 1px;
         }
-        .header { top: 45px; }
-        .footer { bottom: 65px; }
+        .header { top: 35px; }
+        .footer { bottom: 45px; }
 
         /* 文字內容區塊 */
         .content-area {
-            width: 55%; 
-            max-height: 85%; /* 限制最大高度，避免覆蓋到 Header/Footer */
+            width: 55%; /* 避開左側 101 地標 */
+            height: 80%;
             display: flex;
             flex-direction: column;
-            justify-content: flex-start; /* 改為靠上，確保長文起始位置正確 */
+            justify-content: center; /* 垂直居中，美感較佳 */
             color: #ffffff;
-            font-size: 18px; /* 2. 若還是超出，可嘗試將此處改為 17px 或 16px */
+            font-size: 18px; /* 全篇文字大小統一 */
             line-height: 1.8;
             text-align: justify;
-            text-shadow: 2px 2px 4px rgba(0,0,0,1);
-            
-            /* 3. 增加捲軸保護：如果文字真的太多，會出現隱形捲軸而不溢出 */
-            overflow-y: auto;
-            padding-right: 10px;
-        }
-
-        /* 美化隱形捲軸 */
-        .content-area::-webkit-scrollbar {
-            width: 5px;
-        }
-        .content-area::-webkit-scrollbar-thumb {
-            background: rgba(212, 175, 55, 0.3);
-            border-radius: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,1); /* 加強深色背景下的可讀性 */
         }
 
         .paragraph {
             margin-bottom: 20px;
-            white-space: pre-wrap;
+            white-space: pre-wrap; /* 保留換行 */
         }
 
         .signature-group {
             text-align: right;
-            margin-top: 30px;
-            padding-bottom: 20px;
+            margin-top: 15px;
         }
     </style>
 </head>
@@ -110,7 +97,7 @@
         </div>
 
         <div class="signature-group">
-            祝 平安喜樂<br><br>
+            祝 平安喜樂<br>
             柏因 敬上
         </div>
     </div>
