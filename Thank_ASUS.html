@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <title>RWC 2026 贊助商感謝函 (通用版)</title>
+    <style>
+        /* 全域設定：標楷體 */
+        * {
+            font-family: "標楷體", "DFKai-SB", "BiauKai", serif;
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 20px;
+            background-color: #1a0505;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        /* 謝卡主體：21:15 比例 (1260 x 900) */
+        .card {
+            width: 1260px;
+            height: 900px;
+            background-image: url('bg2.png');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            border: 2px solid #a67c00; 
+            box-shadow: 0 30px 60px rgba(0,0,0,0.8);
+            display: flex;
+            justify-content: flex-end; 
+            align-items: center;
+            padding: 0 80px;
+            overflow: hidden;
+        }
+
+        /* Header */
+        .event-label {
+            position: absolute;
+            width: 100%;
+            left: 0;
+            top: 45px;
+            text-align: center;
+            font-size: 20px; 
+            color: rgba(212, 175, 55, 0.9); 
+            letter-spacing: 1.5px;
+            z-index: 2;
+        }
+
+        /* 文字內容區塊 */
+        .content-area {
+            width: 55%;        
+            max-height: 700px; 
+            display: flex;
+            flex-direction: column;
+            justify-content: center; 
+            color: #ffffff;
+            font-size: 20px;   /* 稍微調大字級，讓通用版內容更飽滿 */
+            line-height: 1.4;  /* 調升行距，增加閱讀舒適度 */
+            text-align: justify;
+            text-shadow: 2px 2px 5px rgba(0,0,0,1);
+            z-index: 1;
+            overflow-y: auto;
+        }
+
+        /* 隱藏捲軸 */
+        .content-area::-webkit-scrollbar { width: 0; }
+
+        .paragraph {
+            margin-bottom: 25px;
+            white-space: pre-wrap;
+        }
+
+        .signature-group {
+            text-align: right;
+            margin-top: 40px;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+
+<div class="card">
+    <div class="event-label">Real World Crypto Symposium 2026 (RWC 2026), Taipei, Taiwan</div>
+
+    <div class="content-area">
+        <div class="main-text">
+            <div class="paragraph">致 華碩電腦(ASUS)與全體團隊：</div>
+
+            <div class="paragraph">在此謹代表 Real World Crypto Symposium 2026 籌備委員會，向  華碩電腦致上最誠摯的謝意。衷心感謝 貴公司對本次於台北舉辦之國際密碼學年度盛會所給予的大力贊助與支持。</div>
+
+            <div class="paragraph">承蒙 華碩電腦的鼎力相助，本次會議得以順利圓滿舉行。與會的國內外專家學者對活動的整體規劃與安排皆給予高度肯定。貴公司的慷慨支持不僅促進了國際間的學術交流，也讓世界看見台灣在資訊安全與密碼學領域的熱情與實力。</div>
+
+            <div class="paragraph">本次會議所締造的豐碩成果，實有賴 貴公司的重要貢獻。我們對這份珍貴的情誼與支持深感榮幸，並將銘記於心。</div>
+
+            <div class="paragraph">謹此再次致上誠摯感謝，<br>
+                並祝福 貴公司事業蒸蒸日上、鴻圖大展、萬事順心。</div>
+        </div>
+
+        <div class="signature-group">
+            Real World Crypto Symposium 2026 籌備委員會<br>
+            楊柏因 與 鐘楷閔 同啟<br>
+            敬上
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
